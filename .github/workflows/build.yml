@@ -9,7 +9,7 @@ jobs:
         test-group: [a, b, c, d, e]
     steps:
       - uses: actions/checkout@v4
-      - uses: docker/setup-buildx-action@v3
+      - uses: docker/setup-buildx-action@v4
       - name: Gather test files
         run: find axlearn -name '*_test.py' > pytest_files.txt
       - name: Split test files into groups
